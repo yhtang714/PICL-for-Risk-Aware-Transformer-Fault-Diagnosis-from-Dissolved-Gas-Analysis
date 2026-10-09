@@ -29,41 +29,6 @@ Rebuild the LaTeX tables and the figures from the stored results (no training ne
     PYTHONPATH=. python experiments/make_tables.py --tables tables --out tex_tables
     PYTHONPATH=. python experiments/make_figures.py --tables tables --out figures
 
-## Full reproduction
-
-    bash run_all.sh
-
-This retrains everything and rewrites the results, tables and figures. It takes several hours on two cores.
-
-Each split is set by a seed, which fixes both the data partition and the model initialisation. Seeds 42-51 are design splits, 52-61 evaluation splits and 62-71 confirmation splits (`run_confirm.sh`). Leave-one-source-out runs use seeds 52-56.
-
-Scripts behind each table and figure of the main text:
-
-| Paper | Scripts (in `experiments/`) |
-|---|---|
-| Table 3 | `config/prior_knowledge.yaml` |
-| Table 5 | `make_tables.py` |
-| Table 7 | `config/config.yaml` (PICL); baseline settings are in the scripts that train them |
-| Table 8 | `kl_sensitivity.py` |
-| Table 9, Figure 5 | `knowledge_alignment.py`, `graph_transition.py` |
-| Table 10, Figure 6 | `main_table.py`, `metrics_full.py`, `modern_baselines.py`, `v6/catboost_eval.py` |
-| Table 11 | `paired_differences.py`, `v6/indist_record_tests.py`, `v6/transformer_tests.py` |
-| Table 12 | `weight_sensitivity.py`, `transform_alternatives.py` |
-| Table 13, Figure 7 | `dump_scores.py`, `matched_coverage.py` |
-| Figure 8 | `misspecification_test.py` |
-| Tables 14-15 | `residual_diagnostics.py`, `scm_variants.py`, `picl_v3_explore.py` |
-| Table 16, Figure 9 | `counterfactual_faithfulness.py`, `intervention_magnitude.py` |
-| Tables 17-19, Figure 10 (top) | `loso.py`, `v4/extract.py --loso`, `v4/eval_loso.py`, `v5/eval_fewshot.py`, `v6/loso_transformer_tests.py` |
-| Table 20 | `weak_label_control.py` |
-| Table 21, Figure 10 (bottom) | `missingness_patterns.py` |
-| Table 22 | `v4/extract.py`, `v4/eval_indist.py` |
-| Table 23 | `matched_coverage.py`, `threshold_analysis.py`, `complexity_scalability.py` |
-| Table 24 | `run_confirm.sh`, `v6/transformer_tests.py --tag _pooled20` |
-| Tables 25 and 27 | `ablation_matched.py`, `causal_necessity.py` |
-| Table 26 | `learning_curve.py` |
-
-Supplementary Material: Table S2 comes from `picl_v2_explore.py`, Figure S2 from `weight_sensitivity.py`, Table S3 from `nonfault_screening.py`, and Table S4 and Figure S3 from `metrics_full.py`. The variants listed in Section S6 are summarised in `tables/design/` (see below).
-
 ## Stored results
 
 - `tables/` holds the CSV files that the table and figure scripts read.
