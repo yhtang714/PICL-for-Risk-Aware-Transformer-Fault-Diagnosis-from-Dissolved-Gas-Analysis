@@ -1,0 +1,25 @@
+# IEC 60599 prior knowledge: hard edges are always present, plausible edges get Beta(pi*kappa, (1-pi)*kappa) priors.
+
+hard_edges:
+  - {src: PD, tgt: H2,    pi: 1.0, rationale: "Partial discharge consistently produces hydrogen as its defining gas (IEC 60599)."}
+  - {src: D1, tgt: C2H2,  pi: 1.0, rationale: "Low-energy discharge breaks C-H bonds; acetylene is the defining product."}
+  - {src: D1, tgt: H2,    pi: 1.0, rationale: "Low-energy discharge co-produces hydrogen alongside acetylene."}
+  - {src: D2, tgt: C2H2,  pi: 1.0, rationale: "High-energy arcing strongly generates acetylene."}
+  - {src: D2, tgt: H2,    pi: 1.0, rationale: "High-energy discharge also produces substantial hydrogen."}
+  - {src: T1, tgt: CH4,   pi: 1.0, rationale: "Low-temperature thermal faults produce methane as dominant gas below 300 C."}
+  - {src: T1, tgt: C2H6,  pi: 1.0, rationale: "Ethane is a defining low-temperature signature; C-C bond stays intact."}
+  - {src: T2, tgt: C2H4,  pi: 1.0, rationale: "Mid-temperature thermal faults are defined by elevated ethylene."}
+  - {src: T2, tgt: C2H6,  pi: 1.0, rationale: "Ethane remains elevated at mid temperature; C-C cracking incomplete below 700 C."}
+  - {src: T3, tgt: C2H4,  pi: 1.0, rationale: "Severe thermal cracking produces ethylene as the dominant signature."}
+  - {src: T3, tgt: C2H6,  pi: 1.0, rationale: "Ethane remains measurable in high-temperature thermal degradation."}
+
+plausible_edges:
+  - {src: PD, tgt: CH4,   pi: 0.30, rationale: "Methane appears in some corona events; weaker and condition-dependent."}
+  - {src: D1, tgt: CH4,   pi: 0.50, rationale: "Local heating around the discharge site produces methane as a thermal byproduct."}
+  - {src: D1, tgt: C2H4,  pi: 0.45, rationale: "Thermal cracking from arc heating sometimes produces ethylene."}
+  - {src: D2, tgt: CH4,   pi: 0.55, rationale: "High-energy arcing generates methane through thermal byproducts."}
+  - {src: D2, tgt: C2H4,  pi: 0.55, rationale: "Arcing in longer hydrocarbon chains releases ethylene as a secondary product."}
+  - {src: T2, tgt: CH4,   pi: 0.55, rationale: "Methane elevation continues into the mid-temperature range."}
+  - {src: T3, tgt: H2,    pi: 0.55, rationale: "Extreme thermal cracking releases hydrogen at substantial levels."}
+  - {src: T3, tgt: CH4,   pi: 0.40, rationale: "Methane carries over from the cracking cascade at high temperature."}
+  - {src: T3, tgt: C2H2,  pi: 0.20, rationale: "Trace acetylene may appear in extreme thermal cases; weaker relation."}

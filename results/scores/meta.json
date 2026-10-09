@@ -1,0 +1,282 @@
+{
+ "52": {
+  "seed": 52,
+  "temperature": 2.6345529709765723,
+  "threshold": 0.3395688235759735,
+  "evidence_weight": 0.03374134751850925,
+  "head_temperature": 4.706689834594727,
+  "baseline_temperatures": {
+   "Random Forest": 5.287858486175537,
+   "XGBoost": 2.5009992122650146,
+   "SVM": 1.3365484476089478,
+   "ANN": 8.311418533325195,
+   "Random Forest (gases only)": 2.8169007301330566
+  }
+ },
+ "53": {
+  "seed": 53,
+  "temperature": 0.8827020852259466,
+  "threshold": 0.47859835624694824,
+  "evidence_weight": 0.025107578317409104,
+  "head_temperature": 0.8473891615867615,
+  "baseline_temperatures": {
+   "Random Forest": 0.9369691014289856,
+   "XGBoost": 1.6734832525253296,
+   "SVM": 0.9842593669891357,
+   "ANN": 4.699324131011963,
+   "Random Forest (gases only)": 1.0951815843582153
+  }
+ },
+ "54": {
+  "seed": 54,
+  "temperature": 1.1338759264974683,
+  "threshold": 0.4304285943508148,
+  "evidence_weight": 0.015882143465081437,
+  "head_temperature": 1.070447564125061,
+  "baseline_temperatures": {
+   "Random Forest": 1.3710057735443115,
+   "XGBoost": 2.5769755840301514,
+   "SVM": 1.1875016689300537,
+   "ANN": 9.185433387756348,
+   "Random Forest (gases only)": 1.2611743211746216
+  }
+ },
+ "55": {
+  "seed": 55,
+  "temperature": 1.0184854053607881,
+  "threshold": 0.4500995874404907,
+  "evidence_weight": 0.1575234997773871,
+  "head_temperature": 0.9275889992713928,
+  "baseline_temperatures": {
+   "Random Forest": 1.0741658210754395,
+   "XGBoost": 2.080440044403076,
+   "SVM": 0.9731953144073486,
+   "ANN": 9.784244537353516,
+   "Random Forest (gases only)": 1.4541778564453125
+  }
+ },
+ "56": {
+  "seed": 56,
+  "temperature": 1.2157003710569687,
+  "threshold": 0.44318363070487976,
+  "evidence_weight": 0.0,
+  "head_temperature": 1.5080763101577759,
+  "baseline_temperatures": {
+   "Random Forest": 1.9231139421463013,
+   "XGBoost": 1.6229950189590454,
+   "SVM": 0.9656450152397156,
+   "ANN": 7.053598880767822,
+   "Random Forest (gases only)": 1.1502491235733032
+  }
+ },
+ "57": {
+  "seed": 57,
+  "temperature": 1.8572635739094017,
+  "threshold": 0.413213849067688,
+  "evidence_weight": 0.0,
+  "head_temperature": 2.5067479610443115,
+  "baseline_temperatures": {
+   "Random Forest": 1.9867249727249146,
+   "XGBoost": 2.198394536972046,
+   "SVM": 1.2569667100906372,
+   "ANN": 7.133790969848633,
+   "Random Forest (gases only)": 1.532549500465393
+  }
+ },
+ "58": {
+  "seed": 58,
+  "temperature": 1.2104419553237835,
+  "threshold": 0.4652896225452423,
+  "evidence_weight": 0.11936641677240553,
+  "head_temperature": 1.2989929914474487,
+  "baseline_temperatures": {
+   "Random Forest": 1.3487074375152588,
+   "XGBoost": 1.8797768354415894,
+   "SVM": 1.1618090867996216,
+   "ANN": 5.9705491065979,
+   "Random Forest (gases only)": 1.198289155960083
+  }
+ },
+ "59": {
+  "seed": 59,
+  "temperature": 1.6100240941909163,
+  "threshold": 0.35614529252052307,
+  "evidence_weight": 0.060377256625564646,
+  "head_temperature": 1.4860255718231201,
+  "baseline_temperatures": {
+   "Random Forest": 1.8796972036361694,
+   "XGBoost": 2.843950033187866,
+   "SVM": 1.3796719312667847,
+   "ANN": 10.969643592834473,
+   "Random Forest (gases only)": 1.5705816745758057
+  }
+ },
+ "60": {
+  "seed": 60,
+  "temperature": 1.1134373721157709,
+  "threshold": 0.35827377438545227,
+  "evidence_weight": 0.6249276777338825,
+  "head_temperature": 0.9226635098457336,
+  "baseline_temperatures": {
+   "Random Forest": 1.0421504974365234,
+   "XGBoost": 1.5887365341186523,
+   "SVM": 0.9616156816482544,
+   "ANN": 5.937103748321533,
+   "Random Forest (gases only)": 1.108396291732788
+  }
+ },
+ "61": {
+  "seed": 61,
+  "temperature": 2.4412603205037637,
+  "threshold": 0.329096257686615,
+  "evidence_weight": 0.04406244641743207,
+  "head_temperature": 6.244745254516602,
+  "baseline_temperatures": {
+   "Random Forest": 2.538590431213379,
+   "XGBoost": 2.2632267475128174,
+   "SVM": 1.1322009563446045,
+   "ANN": 8.69162368774414,
+   "Random Forest (gases only)": 1.2289111614227295
+  }
+ },
+ "62": {
+  "seed": 62,
+  "temperature": 1.978850426856779,
+  "threshold": 0.34662654995918274,
+  "evidence_weight": 0.0343435915912297,
+  "head_temperature": 2.9931931495666504,
+  "baseline_temperatures": {
+   "Random Forest": 1.7652825117111206,
+   "XGBoost": 1.8267085552215576,
+   "SVM": 1.1892940998077393,
+   "ANN": 7.338908672332764,
+   "Random Forest (gases only)": 2.372988700866699
+  }
+ },
+ "63": {
+  "seed": 63,
+  "temperature": 1.4096772783929317,
+  "threshold": 0.45542678236961365,
+  "evidence_weight": 0.5201470565541008,
+  "head_temperature": 1.0507527589797974,
+  "baseline_temperatures": {
+   "Random Forest": 1.0687676668167114,
+   "XGBoost": 1.8209598064422607,
+   "SVM": 0.9551152586936951,
+   "ANN": 5.265108108520508,
+   "Random Forest (gases only)": 1.16709566116333
+  }
+ },
+ "64": {
+  "seed": 64,
+  "temperature": 1.5711330630051552,
+  "threshold": 0.34714275598526,
+  "evidence_weight": 0.17798845360590493,
+  "head_temperature": 1.6013085842132568,
+  "baseline_temperatures": {
+   "Random Forest": 2.0330936908721924,
+   "XGBoost": 2.4542155265808105,
+   "SVM": 1.281008005142212,
+   "ANN": 13.729449272155762,
+   "Random Forest (gases only)": 1.5666191577911377
+  }
+ },
+ "65": {
+  "seed": 65,
+  "temperature": 1.0807486246196356,
+  "threshold": 0.3973623514175415,
+  "evidence_weight": 0.14247942815635903,
+  "head_temperature": 1.1575617790222168,
+  "baseline_temperatures": {
+   "Random Forest": 1.2836275100708008,
+   "XGBoost": 1.8285716772079468,
+   "SVM": 1.0214076042175293,
+   "ANN": 5.798110485076904,
+   "Random Forest (gases only)": 1.0922725200653076
+  }
+ },
+ "66": {
+  "seed": 66,
+  "temperature": 1.5184145240162692,
+  "threshold": 0.38927003741264343,
+  "evidence_weight": 0.0,
+  "head_temperature": 2.1060950756073,
+  "baseline_temperatures": {
+   "Random Forest": 1.231560230255127,
+   "XGBoost": 1.8359179496765137,
+   "SVM": 1.133486032485962,
+   "ANN": 7.58491325378418,
+   "Random Forest (gases only)": 2.000994920730591
+  }
+ },
+ "67": {
+  "seed": 67,
+  "temperature": 1.6251128847067777,
+  "threshold": 0.4648984968662262,
+  "evidence_weight": 0.16075340798158175,
+  "head_temperature": 1.787979006767273,
+  "baseline_temperatures": {
+   "Random Forest": 2.690035581588745,
+   "XGBoost": 1.9663434028625488,
+   "SVM": 1.3336862325668335,
+   "ANN": 7.440730094909668,
+   "Random Forest (gases only)": 1.8976082801818848
+  }
+ },
+ "68": {
+  "seed": 68,
+  "temperature": 1.007343907782041,
+  "threshold": 0.4558827877044678,
+  "evidence_weight": 0.08441931864671591,
+  "head_temperature": 0.9238719344139099,
+  "baseline_temperatures": {
+   "Random Forest": 0.953006386756897,
+   "XGBoost": 1.8478929996490479,
+   "SVM": 0.9770762920379639,
+   "ANN": 6.486442565917969,
+   "Random Forest (gases only)": 1.5386621952056885
+  }
+ },
+ "69": {
+  "seed": 69,
+  "temperature": 1.0139886313937083,
+  "threshold": 0.4895468056201935,
+  "evidence_weight": 0.0,
+  "head_temperature": 0.9712550044059753,
+  "baseline_temperatures": {
+   "Random Forest": 1.1669790744781494,
+   "XGBoost": 2.6310739517211914,
+   "SVM": 1.2000994682312012,
+   "ANN": 8.2273530960083,
+   "Random Forest (gases only)": 1.1860284805297852
+  }
+ },
+ "70": {
+  "seed": 70,
+  "temperature": 1.1454710706168512,
+  "threshold": 0.4834687411785126,
+  "evidence_weight": 0.5012934636007549,
+  "head_temperature": 0.8945457935333252,
+  "baseline_temperatures": {
+   "Random Forest": 0.9879173636436462,
+   "XGBoost": 2.0232927799224854,
+   "SVM": 0.9401112198829651,
+   "ANN": 7.6284661293029785,
+   "Random Forest (gases only)": 0.9846935868263245
+  }
+ },
+ "71": {
+  "seed": 71,
+  "temperature": 2.0687578066793986,
+  "threshold": 0.38649478554725647,
+  "evidence_weight": 0.12123410223253171,
+  "head_temperature": 3.214745283126831,
+  "baseline_temperatures": {
+   "Random Forest": 1.7167870998382568,
+   "XGBoost": 2.0387160778045654,
+   "SVM": 1.182078242301941,
+   "ANN": 7.404326438903809,
+   "Random Forest (gases only)": 2.3159689903259277
+  }
+ }
+}

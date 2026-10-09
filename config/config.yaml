@@ -1,0 +1,132 @@
+experiment:
+  seed: 42
+  output_dir: results
+data:
+  csv_path: data/dga_provenance.csv
+  n_sources: 6
+  gas_feature_mode: log1p_z
+  fault_types:
+  - PD
+  - D1
+  - D2
+  - T1
+  - T2
+  - T3
+  gas_types:
+  - H2
+  - CH4
+  - C2H2
+  - C2H4
+  - C2H6
+  split_mode: random_group
+  filter_query: group == 'single_fault' and label_confirmed and fault_record
+  weak_label_query: null
+model:
+  kappa: 10.0
+  noise_log_var_init: 0.0
+  forbid_fault_to_fault: true
+  forbid_gas_to_gas: false
+  temperature_init: 1.0
+  temperature_final: 0.05
+  weight_prior_scale_hard: 1.0
+  weight_prior_scale_plausible: 1.0
+  weight_prior_scale_unknown: 1.0
+  kl_weight: 200.0
+  acyclicity_weight: 1.0
+  weight_reg_weight: 200.0
+  discriminative_weight: 1.0
+  class_balanced_loss: true
+  physics_ordering_weight: 0.0
+  physics_margin: 0.1
+  acyclicity_squared: false
+  eta_sigma: 0.01
+training:
+  grad_clip: 5.0
+  phase1:
+    epochs: 400
+    lr: 0.02
+  phase2_structure:
+    epochs: 200
+    lr: 0.01
+  phase2_params:
+    epochs: 200
+    lr: 0.01
+augmentation:
+  target_size: 1
+  intervention_levels:
+  - 0.5
+  - 0.75
+  - 1.0
+  - 1.25
+  - 1.5
+  plausibility_ratio: 1.5
+  max_synthetic_ratio: 10.0
+inference:
+  n_graph_samples: 50
+  temperature_scaling: true
+  calibration: multiclass_temperature
+  intervention_source: onehot
+  clamp_scores: false
+  gate_weights:
+    posterior: 1.0
+    disablement: 0.0
+    sufficiency: 0.0
+  threshold_mode: target_cov
+  cost_error: 10.0
+  cost_review: 1.0
+  target_coverage: 0.85
+  threshold_grid_min: 0.0
+  threshold_grid_max: 1.0
+  threshold_grid_steps: 401
+  ece_bins: 15
+classifier_head:
+  enabled: true
+  model: random_forest
+  ensemble: false
+  n_estimators: 500
+  max_depth: 0
+  learning_rate: 0.05
+  train_on_real_only: true
+  members:
+  - model: random_forest
+    max_depth: 0
+  feature_blocks:
+  - gas
+  - dga
+  - loglik
+  class_weight: balanced
+  evidence_fusion: true
+  missing_gases: reduced
+  main_on_complete_only: false
+  n_jobs: 2
+physics:
+  dominance:
+  - fault: PD
+    dominant: H2
+    weaker: CH4
+  - fault: PD
+    dominant: H2
+    weaker: C2H2
+  - fault: D1
+    dominant: C2H2
+    weaker: C2H4
+  - fault: D2
+    dominant: C2H2
+    weaker: C2H6
+  - fault: T1
+    dominant: CH4
+    weaker: C2H4
+  - fault: T1
+    dominant: C2H6
+    weaker: C2H2
+  - fault: T2
+    dominant: C2H4
+    weaker: C2H2
+  - fault: T3
+    dominant: C2H4
+    weaker: C2H2
+  - fault: T3
+    dominant: C2H4
+    weaker: CH4
+baselines:
+  dag_search_space: fault_to_gas_only
